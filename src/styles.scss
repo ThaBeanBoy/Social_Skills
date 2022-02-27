@@ -1,27 +1,4 @@
-@font-face {
-  font-family: noiceFont-light;
-  src: url(./font/static/Recursive/Recursive-Light.ttf);
-}
-
-@font-face {
-  font-family: noiceFont;
-  src: url(./font/static/Recursive/Recursive-Regular.ttf);
-}
-
-@font-face {
-  font-family: noiceFont-bold;
-  src: url(./font/static/Recursive/Recursive-Black.ttf);
-}
-
-@font-face {
-  font-family: noiceFont-semibold;
-  src: url(./font/static/Recursive/Recursive-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: noiceFont-medium;
-  src: url(./font/static/Recursive/Recursive-Medium.ttf);
-}
+@import './fonts.scss';
 
 * {
   padding: 0;
