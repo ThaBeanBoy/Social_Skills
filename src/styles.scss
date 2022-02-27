@@ -1,0 +1,41 @@
+@font-face {
+  font-family: noiceFont-light;
+  src: url(./font/static/Recursive/Recursive-Light.ttf);
+}
+
+@font-face {
+  font-family: noiceFont;
+  src: url(./font/static/Recursive/Recursive-Regular.ttf);
+}
+
+@font-face {
+  font-family: noiceFont-bold;
+  src: url(./font/static/Recursive/Recursive-Black.ttf);
+}
+
+@font-face {
+  font-family: noiceFont-semibold;
+  src: url(./font/static/Recursive/Recursive-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: noiceFont-medium;
+  src: url(./font/static/Recursive/Recursive-Medium.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: noiceFont /* , sans-serif */;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgb(157, 200, 248);
+  height: 100vh;
+  width: 100vw;
+}
