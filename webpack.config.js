@@ -1,19 +1,21 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var WebpackPwaManifest = require('webpack-pwa-manifest');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
-  devServer: {
-    static: './dist',
-    hot: true,
-  },
+  // devServer: {
+  //   static: './dist',
+  // },
   optimization: {
     usedExports: true,
   },
 
   entry: {
-    index: './src/index.ts',
+    index: './src/index.js',
+    sw: './src/sw.js',
   },
 
   module: {
@@ -56,13 +58,63 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
+      favicon: './src/logo/logo32.png',
       filename: 'index.html',
       title: 'document',
       template: './src/index.html',
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true,
-      },
+      // minify: {
+      // collapseWhitespace: true,
+      //   removeComments: true,
+      // },
+    }),
+
+    new BrowserSyncPlugin({
+      // browse to http://localhost:3000/ during development,
+      // ./dist directory is being served
+      host: 'localhost',
+      port: 2000,
+      server: { baseDir: ['dist'] },
+    }),
+    new WebpackPwaManifest({
+      filename: 'manifest.json',
+      name: 'Social Skills',
+      short_name: 'Social Skills',
+      description: 'App to help improve social skills',
+      background_color: '#E8DB7D',
+      display: 'standalone',
+      start_url: '.',
+      icons: [
+        {
+          src: path.resolve('src/logo/logo48.png'),
+          sizes: '48x48',
+          type: 'image/png',
+        },
+        {
+          src: path.resolve('src/logo/logo72.png'),
+          sizes: '72x72',
+          type: 'image/png',
+        },
+        {
+          src: path.resolve('src/logo/logo96.png'),
+          sizes: '96x96',
+          type: 'image/png',
+        },
+        {
+          src: path.resolve('src/logo/logo144.png'),
+          sizes: '144x144',
+          type: 'image/png',
+        },
+        {
+          src: path.resolve('src/logo/logo168.png'),
+          sizes: '168x168',
+          type: 'image/png',
+        },
+        {
+          src: path.resolve('src/logo/logo192.png'),
+          sizes: '192x192',
+          type: 'image/png',
+        },
+      ],
     }),
   ],
 

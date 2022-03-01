@@ -1,0 +1,41 @@
+{
+  "icons": [
+    {
+      "src": "auto/icon_192x192.b9cef64caafb846447824a61e8963fa9.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "auto/icon_168x168.73b6001b7c3138dabcf8bcf0a0766a40.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "auto/icon_144x144.88793c865828f728c16d5b8f5faa29bc.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "auto/icon_96x96.1976c2612d8a94b05b78d9473e8d5841.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "auto/icon_72x72.c8624969e194fc2fb4d00ceb0a5c29b1.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "auto/icon_48x48.7184c5ba17f8ebdf74e5a2079115e10b.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "name": "Social Skills",
+  "short_name": "Social Skills",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "App to help improve social skills",
+  "background_color": "#E8DB7D"
+}

@@ -1,0 +1,8 @@
+
+.icon-left-open:before { content: '\e800'; } /* '' */
+.icon-plus:before { content: '\e802'; } /* '' */
+.icon-cancel:before { content: '\e803'; } /* '' */
+.icon-minus:before { content: '\e804'; } /* '' */
+.icon-lock:before { content: '\e805'; } /* '' */
+.icon-food:before { content: '\f0f5'; } /* '' */
+.icon-newspaper:before { content: '\f4f0'; } /* '' */

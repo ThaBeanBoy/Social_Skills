@@ -1,18 +1,49 @@
 @import './fonts.scss';
+@import './fontello-6d10df32/css/fontello-embedded.css';
+
+$body-padding: 0.75rem;
+$shadow-dist: 0.5rem;
+
+$module-border-width: 0.1rem;
+$module-border-radius: 0.5rem;
+$module-padding: 0.5rem;
+
+$ColPal-black: #231123;
+$ColPal-noice-red: #ff757e;
+$ColPal-noice-green: #9eff95;
+$ColPal-main-yellow: #e8db7d;
+$ColPal-cool-blue: #eff7ff;
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: $ColPal-black;
+}
+
+.button {
+  cursor: pointer;
+}
+
+@mixin buttonPressStyle {
+  box-shadow: 0.1rem 0.1rem rgb(75, 75, 75);
+  filter: brightness(0.8);
+}
+
+.button {
+  transition: 0.1s;
+  box-shadow: $shadow-dist $shadow-dist grey;
+
+  &:active {
+    @include buttonPressStyle();
+    filter: brightness(0.8);
+    transform: translateY(4px);
+  }
 }
 
 body {
-  font-family: noiceFont /* , sans-serif */;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: rgb(157, 200, 248);
-  height: 100vh;
-  width: 100vw;
+  font-family: noiceFont;
+  overflow: hidden;
+  @import './Sass/sectionHome';
+  @import './Sass/sectionNoteReview';
 }
