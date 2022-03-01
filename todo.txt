@@ -1,0 +1,13 @@
+#Set up
+    <> Webpack
+        <> config files
+    >< Sass loader
+    >< Font loader
+    <> Typescript
+        <> Sort out issue with loading svg
+    ><Repo
+    <>Offline availablity
+
+#General
+    <> Remove blue highlight when user clicks a button
+    <> Remove user select
