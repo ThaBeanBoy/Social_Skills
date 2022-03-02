@@ -1,13 +1,42 @@
 #Set up
-    <> Webpack
-        <> config files
+    <> Webpack - config files
     >< Sass loader
     >< Font loader
-    <> Typescript
-        <> Sort out issue with loading svg
-    ><Repo
-    <>Offline availablity
+    <> Typescript - Sort out issue with loading svg
+    >< Repo
+    >< Offline availablity
+    <> Sort out app icon issue
 
-#General
+# HTML & CSS
     <> Remove blue highlight when user clicks a button
     <> Remove user select
+
+    # Home
+        >< Basic markup
+
+    # Notes Review
+        <> Basic markup
+        <> Close button
+
+    #Module view
+        <> back button
+
+    <> Loading screen (To look cool and hide the nonsense css loading done by webpack)
+
+# JS
+    <> Initiate Swiper to swiper from Home to Module view
+
+    # Home
+        <> Alertion of locked modules
+
+    # Notes Review
+        <> Open and closing of Notes
+
+    #Module view
+        <> displaying progression of module
+        <> Incrementing / Decrementing and saving meets
+        <> Input and save field Notes (with auto saving)
+
+        # Swiper
+            <> Clicking to change window
+            <> Actually swiping to go to other window
