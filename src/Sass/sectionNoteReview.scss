@@ -15,6 +15,9 @@ section.noteReview {
   padding: 0;
   background-color: $ColPal-cool-blue;
 
+  display: flex;
+  flex-direction: column;
+
   .top {
     width: 100%;
 
@@ -32,6 +35,35 @@ section.noteReview {
       background-color: $ColPal-main-yellow;
       padding: 0.25rem;
       border-radius: 50%;
+    }
+  }
+
+  .noteReviewsList {
+    flex: 1;
+    width: 100%;
+
+    .moduleNoteReview {
+      border: solid black 0.1rem;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+
+      .moduleNoteReviewTop {
+        margin-bottom: 0.5rem;
+        border-bottom: 0.1rem black solid;
+        font-family: noiceFontSemibold;
+        font-size: 1.25rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i {
+          // background-color: $ColPal-main-yellow;
+          // padding: 0.25rem;
+          // border-radius: 50%;
+          transform: rotate(90deg);
+        }
+      }
     }
   }
 }

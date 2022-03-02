@@ -2,6 +2,7 @@
 @import './fontello-6d10df32/css/fontello-embedded.css';
 
 $body-padding: 0.75rem;
+$padding-top-for-list: 0.5rem;
 $shadow-dist: 0.5rem;
 
 $module-border-width: 0.1rem;
@@ -19,10 +20,24 @@ $ColPal-cool-blue: #eff7ff;
   margin: 0;
   box-sizing: border-box;
   color: $ColPal-black;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  ul {
+    list-style-type: none;
+  }
 }
 
-.button {
-  cursor: pointer;
+.cool-list {
+  padding-top: 0.5rem;
+
+  & > li {
+    margin: 1rem 0;
+    width: 100%;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 @mixin buttonPressStyle {
@@ -33,6 +48,7 @@ $ColPal-cool-blue: #eff7ff;
 .button {
   transition: 0.1s;
   box-shadow: $shadow-dist $shadow-dist grey;
+  cursor: pointer;
 
   &:active {
     @include buttonPressStyle();

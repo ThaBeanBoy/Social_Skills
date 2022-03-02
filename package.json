@@ -4,7 +4,6 @@
   "description": "",
   "private": true,
   "scripts": {
-    "watch": "webpack --watch",
     "compile": "webpack",
     "server": "webpack serve --open",
     "build": "webpack --config webpack.prod.js",

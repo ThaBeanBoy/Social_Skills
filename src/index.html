@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="./manifest.json" />
-    <!-- <title>Document</title> -->
   </head>
   <body>
     <section class="home">
@@ -13,10 +12,10 @@
         <h1>Social Skills</h1>
       </div>
 
-      <div class="allModules">
-        <div class="module unlocked button" data-module="x">
+      <ul class="allModules cool-list">
+        <li class="module unlocked button" data-module="x">
           <div class="left-side">
-            <div class="module-name">Yo</div>
+            <span class="module-name">Yo</span>
             <div class="progress-bar">
               <div class="progress-filler"></div>
             </div>
@@ -25,11 +24,11 @@
             16 <br />
             38%
           </div>
-        </div>
+        </li>
 
-        <div class="module locked button" data-module="x">
+        <li class="module locked button" data-module="x">
           <div class="left-side">
-            <div class="module-name">Basic conversation</div>
+            <span class="module-name">Basic conversation</span>
             <div class="progress-bar">
               <div class="progress-filler"></div>
             </div>
@@ -37,8 +36,8 @@
           <div class="right-side">
             <i class="icon-lock"></i>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
 
       <div id="viewNotes">View Notes <i class="icon-newspaper"></i></div>
     </section>
@@ -46,8 +45,30 @@
     <section class="noteReview">
       <div class="top">
         <h1>Notes</h1>
-        <i class="icon-cancel button"></i>
+        <i id="closeNoteReview" class="icon-cancel button"></i>
       </div>
+
+      <ul class="noteReviewsList cool-list">
+        <li class="moduleNoteReview button" data-state="open">
+          <div class="moduleNoteReviewTop">
+            <span class="module-name">Module name</span>
+            <i class="icon-left-open"></i>
+          </div>
+
+          <p class="note">hello, this is a note for this module...</p>
+        </li>
+
+        <li class="moduleNoteReview button" data-state="open">
+          <div class="moduleNoteReviewTop">
+            <span class="module-name">Module name</span>
+            <i class="icon-left-open"></i>
+          </div>
+
+          <p class="note">hello, this is a note for this module...</p>
+        </li>
+      </ul>
     </section>
+
+    <section class="moduleView"></section>
   </body>
 </html>

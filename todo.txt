@@ -1,24 +1,32 @@
 #Set up
-    <> Webpack - config files
+    >< Webpack - config files
     >< Sass loader
     >< Font loader
     <> Typescript - Sort out issue with loading svg
     >< Repo
     >< Offline availablity
-    <> Sort out app icon issue
+    >< Sort out app icon issue
 
 # HTML & CSS
+    <> Loading screen
+        <> Svg logo appearing
+        <> Svg logo dissipating
+        <> Background color of yellow fades away
     <> Remove blue highlight when user clicks a button
     <> Remove user select
+    <> All sections should have the same padding
+        >< Home
+        >< Notes review
+        <> Module view
 
     # Home
         >< Basic markup
         >< Open notes review
-        <> Make the right-side of all modules the same width, for consistency dawg
+        >< Make the right-side of all modules the same width, for consistency dawg
 
     # Notes Review
-        <> Basic markup
-        <> Close button
+        >< Basic markup
+        >< Close button
 
     #Module view
         <> back button
@@ -26,10 +34,15 @@
     <> Loading screen (To look cool and hide the nonsense css loading done by webpack)
 
 # JS
+    <> When making elements from strings, compress the final strings e.g:
+        function takes in a string(to be the html ofcourse)
+        function spits out the string but compresses 
     <> Initiate Swiper to swiper from Home to Module view
+    <> On window resize
 
     # Home
         <> Alertion of locked modules
+        <> Opening a module
 
     # Notes Review
         <> Open and closing of Notes
