@@ -75,6 +75,7 @@ module.exports = {
       port: 2000,
       server: { baseDir: ['dist'] },
     }),
+
     new WebpackPwaManifest({
       filename: 'manifest.json',
       name: 'Social Skills',

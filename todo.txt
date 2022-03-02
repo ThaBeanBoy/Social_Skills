@@ -13,6 +13,8 @@
 
     # Home
         >< Basic markup
+        >< Open notes review
+        <> Make the right-side of all modules the same width, for consistency dawg
 
     # Notes Review
         <> Basic markup

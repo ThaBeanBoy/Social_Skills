@@ -5,8 +5,10 @@
   "private": true,
   "scripts": {
     "watch": "webpack --watch",
-    "build": "webpack",
-    "server": "webpack serve --open"
+    "compile": "webpack",
+    "server": "webpack serve --open",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack --watch --config webpack.dev.js"
   },
   "keywords": [],
   "author": "",
