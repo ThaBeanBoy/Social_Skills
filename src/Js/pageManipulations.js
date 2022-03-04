@@ -5,6 +5,8 @@ import {
   UIhome,
   UI_Home_allModulesBox,
   UI_NoteReview_moduleNoteReview,
+  UI_Alert_alerBox,
+  UI_Alert_alert,
 } from './UIelements';
 
 const animatinonDelay = 0.3;
@@ -80,4 +82,28 @@ Home_ModuleView.from(Array.from(UIModuleView.childNodes).reverse(), {
   ease: 'Expo.easeOut',
 
   duration: 0.25,
+});
+
+export const alertBox = gsap.timeline({
+  paused: true,
+  delay: animatinonDelay,
+  defaults: {
+    duration: 0,
+    ease: 'none',
+  },
+});
+alertBox.to(UI_Alert_alerBox, {
+  height: '100vh',
+
+  duration: 0,
+});
+alertBox.to(UI_Alert_alerBox, {
+  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+
+  duration: 0.25,
+});
+alertBox.from(UI_Alert_alert, {
+  translateY: '-200%',
+
+  duration: 0.1,
 });

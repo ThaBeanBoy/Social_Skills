@@ -49,7 +49,7 @@ section.noteReview {
       padding: 0.5rem;
 
       .moduleNoteReviewTop {
-        margin-bottom: 0.5rem;
+        // margin-bottom: 0.5rem;
         border-bottom: 0.1rem black solid;
         font-family: noiceFontSemibold;
         font-size: 1.25rem;
@@ -64,6 +64,11 @@ section.noteReview {
           // border-radius: 50%;
           transform: rotate(90deg);
         }
+      }
+
+      .note {
+        overflow: hidden;
+        height: 0;
       }
     }
   }

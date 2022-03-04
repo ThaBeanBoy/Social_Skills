@@ -25,12 +25,12 @@
         >< Basic markup
         >< Open notes review
         >< Make the right-side of all modules the same width, for consistency dawg
-        <> Alert locked
+        >< Alert locked
 
     # Notes Review
         >< Basic markup
         >< Close button
-        <> Open and close of review
+        >< Open and close of review
 
     #Module view
         >< Basic markup
@@ -67,6 +67,4 @@
 
         <> Input and save field Notes (with auto saving)
 
-        # Swiper
-            <> Clicking to change window
-            <> Actually swiping to go to other window
+    <> Add 30 termination if incomplete

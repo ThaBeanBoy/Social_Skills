@@ -1,10 +1,16 @@
 import gsap from 'gsap';
 
-import { Home_ModuleView, Home_NoteReview } from './pageManipulations';
+import {
+  Home_ModuleView,
+  Home_NoteReview,
+  alertBox,
+} from './pageManipulations';
 import {
   UI_Home_top,
   UI_Home_allUnlockedModules,
   UI_Home_viewNotesBtn,
+  UI_Home_allLockedModules,
+  UI_Alert_closeAlertion,
 } from './UIelements';
 import icon from '../logo/logoSvg.svg';
 
@@ -27,6 +33,12 @@ const homeCode = () => {
   UI_Home_allUnlockedModules.forEach((el) => {
     el.addEventListener('click', () => Home_ModuleView.play());
   });
+
+  //   Alerting locked module
+  UI_Home_allLockedModules.forEach((el) => {
+    el.addEventListener('click', () => alertBox.play());
+  });
+  UI_Alert_closeAlertion.addEventListener('click', () => alertBox.reverse());
 
   //   Setting transition for review notes
   UI_Home_viewNotesBtn.addEventListener('click', () => Home_NoteReview.play());

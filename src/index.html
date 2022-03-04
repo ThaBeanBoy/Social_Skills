@@ -7,6 +7,18 @@
     <link rel="manifest" href="./manifest.json" />
   </head>
   <body>
+    <div class="alerBox">
+      <div id="locked-module-alert">
+        <i id="heroIcon" class="icon-lock"></i>
+        <h1>Locked</h1>
+        <p>
+          This module is blocked <br />
+          you’ll have to finish all modules before this one
+        </p>
+        <div id="close-alertion" class="button">Ok</div>
+      </div>
+    </div>
+
     <section class="home">
       <div class="top">
         <h1>Social Skills</h1>
@@ -49,7 +61,7 @@
       </div>
 
       <ul class="noteReviewsList cool-list">
-        <li class="moduleNoteReview button" data-state="open">
+        <li class="moduleNoteReview button" data-showing="false">
           <div class="moduleNoteReviewTop">
             <span class="module-name">Module name</span>
             <i class="icon-left-open"></i>
@@ -58,7 +70,7 @@
           <p class="note">hello, this is a note for this module...</p>
         </li>
 
-        <li class="moduleNoteReview button" data-state="open">
+        <li class="moduleNoteReview button" data-showing="true">
           <div class="moduleNoteReviewTop">
             <span class="module-name">Module name</span>
             <i class="icon-left-open"></i>

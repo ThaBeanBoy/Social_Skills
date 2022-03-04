@@ -26,3 +26,8 @@ export const UI_ModuleView_backButton = UI('.moduleView #back2Home');
 export const UI_ModuleView_percantageProgression = UI(
   '#percantage-progression'
 );
+
+// Alert stuff
+export const UI_Alert_alerBox = UI('.alerBox');
+export const UI_Alert_alert = UI('#locked-module-alert');
+export const UI_Alert_closeAlertion = UI('#close-alertion');
