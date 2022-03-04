@@ -8,16 +8,18 @@
     >< Sort out app icon issue
 
 # HTML & CSS
+    <> make variables for elements of UI
+    <> Swiper between home and module view
     <> Loading screen
         <> Svg logo appearing
         <> Svg logo dissipating
         <> Background color of yellow fades away
-    <> Remove blue highlight when user clicks a button
-    <> Remove user select
-    <> All sections should have the same padding
+    >< Remove blue highlight when user clicks a button
+    >< Remove user select
+    >< All sections should have the same padding
         >< Home
         >< Notes review
-        <> Module view
+        >< Module view
 
     # Home
         >< Basic markup
@@ -29,9 +31,13 @@
         >< Close button
 
     #Module view
+        >< Basic markup
+        >< Sort out swiper tings
+            >< on index change
+            >< press on head thingy
+        <> Make the back button same size as the percantage thing
+        <> make the decrementor and incrementor buton the same width the percantage ting
         <> back button
-
-    <> Loading screen (To look cool and hide the nonsense css loading done by webpack)
 
 # JS
     <> When making elements from strings, compress the final strings e.g:
@@ -46,10 +52,17 @@
 
     # Notes Review
         <> Open and closing of Notes
+        <> Alertion of locked modules
 
     #Module view
+        <> Display module name
         <> displaying progression of module
-        <> Incrementing / Decrementing and saving meets
+        <> Display meets
+
+        <> Incrementing / Decrementing
+            <> Results show in meets
+            <> Results show in progression
+
         <> Input and save field Notes (with auto saving)
 
         # Swiper

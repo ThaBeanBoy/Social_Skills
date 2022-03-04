@@ -1,0 +1,136 @@
+$margin-bottom: 0.5rem;
+$border-width: 0.1rem;
+.moduleView {
+  // Dummy code, the actual thing will be nested in something else
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 100vw;
+  background-color: $ColPal-cool-blue;
+  padding: $body-padding;
+
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    margin-bottom: $margin-bottom;
+    width: 100%;
+    font-size: 1.75rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    i {
+      background-color: $ColPal-main-yellow;
+      padding: 0.25rem;
+      border-radius: 50%;
+    }
+
+    .module-name {
+      text-decoration: underline;
+    }
+
+    .percantage-progression {
+      border: 0.1rem solid black;
+      border-radius: 0.75rem;
+      padding: 0.5rem;
+      background-color: $ColPal-noice-green;
+      font-family: noiceFontSemibold;
+    }
+  }
+
+  .count-manipulator {
+    $good-padding: 0.5rem;
+    $good-border-radius: 0.5rem;
+
+    margin-bottom: calc($shadow-dist + 0.25rem);
+    width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+
+    .button {
+      border: solid black;
+      padding: $good-padding;
+
+      flex: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child {
+        border-width: $border-width 0 $border-width $border-width;
+        border-radius: $good-border-radius 0 0 $good-border-radius;
+        background-color: $ColPal-noice-red;
+      }
+
+      &:last-child {
+        border-width: $border-width $border-width $border-width 0;
+        border-radius: 0 $good-border-radius $good-border-radius 0;
+        background-color: $ColPal-noice-green;
+      }
+    }
+
+    #details {
+      text-align: center;
+
+      background-color: $ColPal-cool-blue;
+      width: 80%;
+      border: 0.1rem solid black;
+      padding: $good-padding;
+    }
+  }
+
+  .swiper-head-switcher {
+    $head-border-radius: 1rem;
+    $head-border-width: 0.1rem;
+
+    margin-bottom: calc($shadow-dist + 0.25rem);
+    border-radius: 0.5rem;
+    width: 100%;
+
+    display: flex;
+
+    div {
+      border: $head-border-width solid black;
+      flex: 1;
+      text-align: center;
+      padding: 0.25rem;
+      font-size: 1.25rem;
+      background-color: $ColPal-cool-blue;
+
+      &:first-child {
+        border-radius: $head-border-radius 0 0 $head-border-radius;
+        border-right-width: calc($head-border-width / 2);
+      }
+
+      &:last-child {
+        border-radius: 0 $head-border-radius $head-border-radius 0;
+        border-left-width: calc($head-border-width / 2);
+      }
+    }
+
+    .active {
+      background-color: $ColPal-main-yellow;
+    }
+  }
+
+  .big-block {
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+
+    .swiper-wrapper .block {
+      font-family: noiceFont;
+      display: block;
+      font-size: 1.25rem;
+      resize: none;
+      height: 100%;
+      // width: 100%;
+      padding: 0.25rem;
+    }
+  }
+}

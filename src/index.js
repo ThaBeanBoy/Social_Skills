@@ -2,24 +2,17 @@ import './styles.scss';
 import gsap from 'gsap';
 import icon from './logo/logoSvg.svg';
 
-// Sass values
-const sassBodyPadding = '0.75rem';
+import moduleViewCode from './Js/moduleView';
+import {
+  UIhome,
+  UInoteReview,
+  UI_Home_top,
+  UI_Home_viewNotesBtn,
+  UI_Home_allModulesBox,
+  UI_Home_closeNoteReview,
+} from './Js/UIelements';
 
-// Sections
-const UIhome = document.querySelector('.home');
-const UInoteReview = document.querySelector('.noteReview');
-
-// Home section UI elements
-const UItop = document.querySelector('.top');
-const UIviewNotesBtn = document.querySelector('#viewNotes');
-const UIallModulesBox = document.querySelector('.allModules');
-const UIallModules = document.querySelectorAll('.module');
-const UIallUnlockedModules = document.querySelectorAll('.unlocked');
-const UIallLockedModules = document.querySelectorAll('.locked');
-
-// Notes review UI elements
-const UIcloseNoteReview = document.querySelector('#closeNoteReview');
-const UInoteReviewsList = document.querySelector('.noteReviewsList');
+moduleViewCode();
 
 // Note review section UI elements
 
@@ -49,7 +42,7 @@ gsap.set('.module .left-side', { width: leftSideWidth });
 // appending logo on homescreen
 const img = document.createElement('img');
 img.src = icon;
-UItop.appendChild(img);
+UI_Home_top.appendChild(img);
 
 // opening note reviews
 const tl = gsap.timeline({
@@ -86,15 +79,15 @@ tl.to(
 );
 tl.to(UInoteReview, {
   height:
-    gsap.getProperty(UIallModulesBox, 'height') +
-    gsap.getProperty(UIallModulesBox, 'padding-top'),
+    gsap.getProperty(UI_Home_allModulesBox, 'height') +
+    gsap.getProperty(UI_Home_allModulesBox, 'padding-top'),
 
   ease: 'power4.out',
   duration: 1,
 });
 
-UIviewNotesBtn.addEventListener('click', () => tl.play());
-UIcloseNoteReview.addEventListener('click', () => tl.reverse());
+UI_Home_viewNotesBtn.addEventListener('click', () => tl.play());
+UI_Home_closeNoteReview.addEventListener('click', () => tl.reverse());
 
 // clicking locked modules
 
