@@ -31,6 +31,7 @@
         >< Basic markup
         >< Close button
         >< Open and close of review
+        <> Rotate arrow
 
     #Module view
         >< Basic markup

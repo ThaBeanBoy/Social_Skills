@@ -8,15 +8,30 @@ const noteReviewCode = () => {
       let showing = el.dataset.showing === 'true';
 
       const duration = 0.5;
-      showing
-        ? gsap.to(el.querySelector('.note'), {
-            height: 0,
-            duration: duration,
-          })
-        : gsap.to(el.querySelector('.note'), {
-            height: 'auto',
-            duration: duration,
-          });
+      if (showing) {
+        // closing the box
+        gsap.to(el.querySelector('.note'), {
+          height: 0,
+          duration: duration,
+        });
+
+        gsap.to(el.querySelector('#showing-indicator'), {
+          rotate: '90deg',
+          duration: duration,
+        });
+      } else {
+        // opening the box
+        gsap.to(el.querySelector('.note'), {
+          height: 'auto',
+          duration: duration,
+        });
+
+        gsap.to(el.querySelector('#showing-indicator'), {
+          rotate: '-90deg',
+          duration: duration,
+        });
+      }
+
       el.dataset.showing = !showing; //? tl.reverse() : tl.play();
     });
   });
