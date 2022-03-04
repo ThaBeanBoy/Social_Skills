@@ -1,9 +1,39 @@
 import Swiper from 'swiper';
 import 'swiper/css';
+import gsap from 'gsap';
 
-import { UI_ModuleView_swiperHeadSwitcher } from './UIelements';
+import {
+  UI_ModuleView_swiperHeadSwitcher,
+  UI_ModuleView_backButton,
+  UI_ModuleView_percantageProgression,
+} from './UIelements';
+import { Home_ModuleView } from './pageManipulations';
 
 const moduleViewCode = () => {
+  const progressionSquare = {
+    width: gsap.getProperty(UI_ModuleView_percantageProgression, 'width'),
+    height: gsap.getProperty(UI_ModuleView_percantageProgression, 'height'),
+  };
+
+  // making the back button same width as prgression thingy
+  gsap.set(UI_ModuleView_backButton, {
+    width: progressionSquare.width,
+    height: progressionSquare.height,
+  });
+
+  // making the incrementor and decrementor same width as progression square
+  gsap.set('.count-manipulator .button', {
+    width: progressionSquare.width,
+    height: progressionSquare.height,
+  });
+
+  // making the swiper-head-switcher same height as the other
+  gsap.set(UI_ModuleView_swiperHeadSwitcher, {
+    // width: progressionSquare.width,
+    height: progressionSquare.height,
+  });
+
+  // Setting up the swiper thingy
   const swiper = new Swiper('.big-block', {
     effect: 'fade',
 
@@ -33,7 +63,10 @@ const moduleViewCode = () => {
     el.addEventListener('click', () => swiper.slideTo(indx));
   });
 
-  // console.log(swi);
+  // Setting up page transition
+  UI_ModuleView_backButton.addEventListener('click', () =>
+    Home_ModuleView.reverse()
+  );
 };
 
 export default moduleViewCode;

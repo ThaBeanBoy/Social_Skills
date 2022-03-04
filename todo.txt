@@ -8,8 +8,8 @@
     >< Sort out app icon issue
 
 # HTML & CSS
-    <> make variables for elements of UI
-    <> Swiper between home and module view
+    >< make variables for elements of UI
+    >< transition between home and module view
     <> Loading screen
         <> Svg logo appearing
         <> Svg logo dissipating
@@ -25,19 +25,21 @@
         >< Basic markup
         >< Open notes review
         >< Make the right-side of all modules the same width, for consistency dawg
+        <> Alert locked
 
     # Notes Review
         >< Basic markup
         >< Close button
+        <> Open and close of review
 
     #Module view
         >< Basic markup
         >< Sort out swiper tings
             >< on index change
             >< press on head thingy
-        <> Make the back button same size as the percantage thing
-        <> make the decrementor and incrementor buton the same width the percantage ting
-        <> back button
+        >< Make the back button same size as the percantage thing
+        >< make the decrementor and incrementor buton the same width the percantage ting
+        >< back button
 
 # JS
     <> When making elements from strings, compress the final strings e.g:

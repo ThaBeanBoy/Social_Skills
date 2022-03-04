@@ -43,6 +43,7 @@ section.noteReview {
     width: 100%;
 
     .moduleNoteReview {
+      overflow: hidden;
       border: solid black 0.1rem;
       border-radius: 0.5rem;
       padding: 0.5rem;

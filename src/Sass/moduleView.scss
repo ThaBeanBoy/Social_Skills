@@ -1,23 +1,30 @@
 $margin-bottom: 0.5rem;
 $border-width: 0.1rem;
+$border-radius: 0.75rem;
+
 .moduleView {
   // Dummy code, the actual thing will be nested in something else
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+  // transform: translateX(100%);
 
-  height: 100vh;
+  // height: 100vh;
+  overflow: hidden;
+  height: 0;
   width: 100vw;
   background-color: $ColPal-cool-blue;
-  padding: $body-padding;
+  // padding: $body-padding;
+  border-bottom: 0.25rem solid black;
 
   display: flex;
   flex-direction: column;
 
   .top {
+    position: relative;
     margin-bottom: $margin-bottom;
     width: 100%;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 
     display: flex;
     justify-content: space-between;
@@ -25,17 +32,21 @@ $border-width: 0.1rem;
 
     i {
       background-color: $ColPal-main-yellow;
-      padding: 0.25rem;
-      border-radius: 50%;
+      // padding: 0.25rem;
+      border-radius: $border-radius;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .module-name {
       text-decoration: underline;
     }
 
-    .percantage-progression {
+    #percantage-progression {
       border: 0.1rem solid black;
-      border-radius: 0.75rem;
+      border-radius: $border-radius;
       padding: 0.5rem;
       background-color: $ColPal-noice-green;
       font-family: noiceFontSemibold;
@@ -43,8 +54,9 @@ $border-width: 0.1rem;
   }
 
   .count-manipulator {
+    position: relative;
     $good-padding: 0.5rem;
-    $good-border-radius: 0.5rem;
+    $good-border-radius: $border-radius;
 
     margin-bottom: calc($shadow-dist + 0.25rem);
     width: 100%;
@@ -53,9 +65,9 @@ $border-width: 0.1rem;
 
     .button {
       border: solid black;
-      padding: $good-padding;
+      // padding: $good-padding;
 
-      flex: 1;
+      // flex: 1;
 
       display: flex;
       align-items: center;
@@ -78,14 +90,14 @@ $border-width: 0.1rem;
       text-align: center;
 
       background-color: $ColPal-cool-blue;
-      width: 80%;
+      flex: 1;
       border: 0.1rem solid black;
       padding: $good-padding;
     }
   }
 
   .swiper-head-switcher {
-    $head-border-radius: 1rem;
+    position: relative;
     $head-border-width: 0.1rem;
 
     margin-bottom: calc($shadow-dist + 0.25rem);
@@ -102,13 +114,17 @@ $border-width: 0.1rem;
       font-size: 1.25rem;
       background-color: $ColPal-cool-blue;
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       &:first-child {
-        border-radius: $head-border-radius 0 0 $head-border-radius;
+        border-radius: $border-radius 0 0 $border-radius;
         border-right-width: calc($head-border-width / 2);
       }
 
       &:last-child {
-        border-radius: 0 $head-border-radius $head-border-radius 0;
+        border-radius: 0 $border-radius $border-radius 0;
         border-left-width: calc($head-border-width / 2);
       }
     }
@@ -131,6 +147,11 @@ $border-width: 0.1rem;
       height: 100%;
       // width: 100%;
       padding: 0.25rem;
+    }
+
+    #field-notes-text-area {
+      border-radius: $border-radius;
+      border: 0.1rem solid black;
     }
   }
 }
