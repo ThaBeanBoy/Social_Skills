@@ -1,14 +1,13 @@
 import './styles.scss';
 
 import moduleViewCode from './Js/moduleView';
-import homeCode from './Js/home';
 import noteReviewCode from './Js/notesReview';
+import './Js/home';
 
 import { UI_Home_closeNoteReview } from './Js/UIelements';
 import { Home_NoteReview } from './Js/pageManipulations';
 
 moduleViewCode();
-homeCode();
 noteReviewCode();
 
 // Setting up service worker

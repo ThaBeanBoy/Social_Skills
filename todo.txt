@@ -31,7 +31,7 @@
         >< Basic markup
         >< Close button
         >< Open and close of review
-        <> Rotate arrow
+        >< Rotate arrow
 
     #Module view
         >< Basic markup
@@ -43,15 +43,16 @@
         >< back button
 
 # JS
-    <> When making elements from strings, compress the final strings e.g:
+    >< When making elements from strings, compress the final strings e.g:
         function takes in a string(to be the html ofcourse)
         function spits out the string but compresses 
-    <> Initiate Swiper to swiper from Home to Module view
     <> On window resize
+    <> Add days in active
 
     # Home
-        <> Alertion of locked modules
-        <> Opening a module
+        >< Display module view if  unlocked
+        >< Display alert if locked
+        >< Sort out padding at the bottom to give space to the "open notes review" button
 
     # Notes Review
         <> Open and closing of Notes

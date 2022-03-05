@@ -35,13 +35,14 @@ section.home {
   }
 
   .allModules {
-    &::before {
-      height: 100%;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 3;
-    }
+    // &::before {
+    //   height: 100%;
+    //   width: 100%;
+    //   background-color: rgba(0, 0, 0, 0.5);
+    //   z-index: 3;
+    // }
 
+    // pa
     overflow-y: scroll;
     overflow-x: visible;
     flex: 1;
@@ -56,7 +57,7 @@ section.home {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: stretch;
 
       $right-Side-width: 20%;
 
@@ -91,11 +92,16 @@ section.home {
       }
 
       .right-side {
+        // height: 100%;
         text-align: center;
         border-left: solid black $module-border-width;
         border-radius: 0 $module-border-radius $module-border-radius 0;
         padding: $module-border-radius;
         background-color: $ColPal-noice-green;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
     .locked {
@@ -105,7 +111,6 @@ section.home {
 
       .right-side {
         background-color: $ColPal-noice-red;
-        content: '';
       }
     }
   }

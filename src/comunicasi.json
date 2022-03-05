@@ -1,62 +1,81 @@
 [
   {
-    "title": "Basics (Pre-screenig and conversation)",
+    "title": "Basics (Pre_screenig and conversation)",
     "notes": "No notes as yet",
     "targetMeets": 200,
-    "activeDaysAllowed": 25
+    "activeDaysAllowed": 25,
+    "id": "md_Basics"
   },
   {
     "title": "Body Language and facial expressions (Me)",
     "notes": "No notes as yet",
     "targetMeets": 300,
-    "activeDaysAllowed": 30
+    "activeDaysAllowed": 30,
+    "id": "md_BodLangFacialExpr_Me"
   },
   {
     "title": "Voice",
     "notes": "No notes as yet",
     "targetMeets": 100,
-    "activeDaysAllowed": 20
+    "activeDaysAllowed": 20,
+    "id": "md_Voice"
   },
   {
     "title": "Emotional Intelligence",
     "notes": "No notes as yet",
     "targetMeets": 100,
-    "activeDaysAllowed": 20
+    "activeDaysAllowed": 20,
+    "id": "md_EQ"
   },
   {
     "title": "Body Language and facial expressions",
     "notes": "No notes as yet",
     "targetMeets": 300,
-    "activeDaysAllowed": 20
+    "activeDaysAllowed": 20,
+    "id": "md_BodLangFacialExpr_Others"
   },
   {
     "title": "Story telling",
     "notes": "No notes as yet",
     "targetMeets": 100,
-    "activeDaysAllowed": 20
+    "activeDaysAllowed": 20,
+    "id": "md_StoryTelling"
   },
   {
     "title": "Humour",
     "notes": "No notes as yet",
     "targetMeets": 100,
-    "activeDaysAllowed": 20
+    "activeDaysAllowed": 20,
+    "id": "md_Humour"
   },
   {
     "title": "How to win people to your way of thinking",
     "notes": "No notes as yet",
     "targetMeets": 100,
-    "activeDaysAllowed": 20
+    "activeDaysAllowed": 20,
+    "id": "md_WinPeepToYourThinking"
   },
   {
     "title": "Being a leader",
     "notes": "No notes as yet",
     "targetMeets": 100,
-    "activeDaysAllowed": 20
+    "activeDaysAllowed": 20,
+    "id": "md_BeingAleader"
   },
   {
-    "title": "Language",
+    "title": "Setswana",
     "notes": "Another App",
     "targetMeets": 100,
-    "activeDaysAllowed": 20
+    "activeDaysAllowed": 20,
+    "id": "md_Setswana",
+    "language": true
+  },
+  {
+    "title": "IsiZulu",
+    "notes": "Another App",
+    "targetMeets": 100,
+    "activeDaysAllowed": 20,
+    "id": "md_Zulu",
+    "language": true
   }
 ]
