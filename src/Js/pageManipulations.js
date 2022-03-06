@@ -11,54 +11,70 @@ import {
 
 const animatinonDelay = 0.3;
 
-export const Home_NoteReview = gsap.timeline({
-  paused: true,
-  delay: animatinonDelay,
-  defaults: {
+export const Home_NoteReviewNotes = (play) => {
+  console.log('awes');
+  const Home_NoteReview = gsap.timeline({
+    paused: true,
+    delay: animatinonDelay,
+    defaults: {
+      duration: 0,
+      ease: 'none',
+    },
+    onReverseComplete: () => {
+      gsap.set(UInoteReview, { height: 0, padding: 0 });
+    },
+    onStart: () => {},
+    onReverseComplete: () => {
+      gsap.set(UInoteReview, { height: '0' });
+    },
+  });
+  Home_NoteReview.to(UInoteReview, {
+    padding: gsap.getProperty(UIhome, 'padding'),
+
     duration: 0,
-    ease: 'none',
-  },
-  onStart: () => {},
-  onReverseComplete: () => {
-    gsap.set(UInoteReview, { height: '0' });
-  },
-});
-Home_NoteReview.to(UInoteReview, {
-  padding: gsap.getProperty(UIhome, 'padding'),
+  });
+  Home_NoteReview.to(UInoteReview, {
+    borderTop: 'solid 0.25rem black',
 
-  duration: 0,
-});
-Home_NoteReview.to(UInoteReview, {
-  borderTop: 'solid 0.25rem black',
+    duration: 0,
+  });
+  Home_NoteReview.to(
+    UIhome,
+    {
+      filter: 'brightness(0.5)',
+      ease: 'none',
 
-  duration: 0,
-});
-Home_NoteReview.to(
-  UIhome,
-  {
-    filter: 'brightness(0.5)',
-    ease: 'none',
+      duration: 0.25,
+    },
+    '<'
+  );
+  Home_NoteReview.to(UInoteReview, {
+    height:
+      gsap.getProperty(UI_Home_allModulesBox, 'height') +
+      gsap.getProperty(UI_Home_allModulesBox, 'padding-top'),
 
-    duration: 0.25,
-  },
-  '<'
-);
-Home_NoteReview.to(UInoteReview, {
-  height:
-    gsap.getProperty(UI_Home_allModulesBox, 'height') +
-    gsap.getProperty(UI_Home_allModulesBox, 'padding-top'),
+    // ease: 'power4.out',
+    ease: 'Expo.easeOut',
+    duration: 0.5,
+  });
+  Home_NoteReview.from(document.querySelectorAll('.moduleNoteReview'), {
+    translateX: '-125%',
+    stagger: 0.1,
 
-  // ease: 'power4.out',
-  ease: 'Expo.easeOut',
-  duration: 0.5,
-});
-Home_NoteReview.from(UI_NoteReview_moduleNoteReview, {
-  translateX: '-125%',
-  stagger: 0.25,
+    ease: 'Expo.easeOut',
+    duration: 0.1,
+  });
 
-  ease: 'Expo.easeOut',
-  duration: 0.2,
-});
+  console.log('should be playing', play);
+  if (play) {
+    console.log('play');
+    Home_NoteReview.play();
+  } else {
+    console.log('reverse');
+
+    Home_NoteReview.reverse();
+  }
+};
 
 export const Home_ModuleView = gsap.timeline({
   paused: true,
@@ -75,7 +91,6 @@ Home_ModuleView.to(UIModuleView, {
 
   duration: 0.25,
 });
-console.log(UIModuleView /* .nodeList */);
 Home_ModuleView.from(Array.from(UIModuleView.childNodes).reverse(), {
   top: '-125%',
   stagger: 0.1,

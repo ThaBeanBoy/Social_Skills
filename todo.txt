@@ -8,12 +8,13 @@
     >< Sort out app icon issue
 
 # HTML & CSS
-    >< make variables for elements of UI
-    >< transition between home and module view
+    <> On window resize
     <> Loading screen
         <> Svg logo appearing
         <> Svg logo dissipating
         <> Background color of yellow fades away
+    >< make variables for elements of UI
+    >< transition between home and module view
     >< Remove blue highlight when user clicks a button
     >< Remove user select
     >< All sections should have the same padding
@@ -45,9 +46,32 @@
 # JS
     >< When making elements from strings, compress the final strings e.g:
         function takes in a string(to be the html ofcourse)
-        function spits out the string but compresses 
-    <> On window resize
-    <> Add days in active
+        function spits out the string but compresses
+    >< export modules
+        >< the module itself
+        >< it's local storage
+        >< first save
+        >< last save
+
+        >< helper function for
+            >< Incrementing/Decrementing
+            >< SetNumbOfMeets
+            >< Saving field Notes
+        
+        >< totalActiveDays > current date - first save
+            >< set meets to []
+        >< inactive days allowed > current date - last save
+            >< set meets to []
+
+        >< Unlocked status
+            >< if previous module done || previous module is a language 
+
+    <>display status of current module
+        <> totalActiveDays left
+        <> how many inactive days left
+
+    <> Add conflict resolution to json
+        <> No days of activities nor inactive days allowed, should just be perpetual 
 
     # Home
         >< Display module view if  unlocked
@@ -55,10 +79,12 @@
         >< Sort out padding at the bottom to give space to the "open notes review" button
 
     # Notes Review
-        <> Open and closing of Notes
+        >< Open and closing of Notes
         <> Alertion of locked modules
+        <> Animation of the li elements
 
     #Module view
+        <> Clicking on the module name should display status of the the mofule
         <> Display module name
         <> displaying progression of module
         <> Display meets
@@ -69,4 +95,5 @@
 
         <> Input and save field Notes (with auto saving)
 
-    <> Add 30 termination if incomplete
+    #Alert
+        <> A click outside the box should close the alert
