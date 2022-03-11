@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="manifest" href="./manifest.json" />
   </head>
   <body>
@@ -65,7 +66,9 @@
 
       <div class="count-manipulator">
         <span id="decrementer" class="button">-</span>
-        <span id="details">Meets: 32/120</span>
+        <span id="details"
+          >Meets: <span id="displayedNumOfMeets">32</span>/120</span
+        >
         <span id="incrementor" class="button">+</span>
       </div>
 
@@ -79,6 +82,7 @@
           <textarea
             id="field-notes-text-area"
             class="block swiper-slide"
+            placeholder="Place field notes here"
           ></textarea>
           <p class="block swiper-slide">note dawg</p>
         </div>

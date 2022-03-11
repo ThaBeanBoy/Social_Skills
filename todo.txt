@@ -66,6 +66,8 @@
         >< Unlocked status
             >< if previous module done || previous module is a language 
 
+    <> Debug dates thingies
+
     <>display status of current module
         <> totalActiveDays left
         <> how many inactive days left
@@ -80,11 +82,32 @@
 
     # Notes Review
         >< Open and closing of Notes
-        <> Alertion of locked modules
         <> Animation of the li elements
 
     #Module view
-        <> Clicking on the module name should display status of the the mofule
+        <> On open
+            >< Module name
+            >< percantage progression
+            >< meets
+            >< field notes
+            >< Note review
+
+            >< Incrementing
+                >< Update the meets,
+                >< Update the progress percantage thing
+                >< Update the home
+            >< Saving changes to note review (with auto saving)
+            >< Decrementing
+                >< If the last meet defeats the codintions for the days, alert user
+                >< Update the meets,
+                >< Update the progress percantage thing
+                >< Update the home
+
+            >< Size up the icons and buttons
+
+            <> Make the text area a proper notepad (TinyMCE) 
+
+        <> Clicking on the module name should display status of the the module
         <> Display module name
         <> displaying progression of module
         <> Display meets
@@ -92,8 +115,6 @@
         <> Incrementing / Decrementing
             <> Results show in meets
             <> Results show in progression
-
-        <> Input and save field Notes (with auto saving)
 
     #Alert
         <> A click outside the box should close the alert

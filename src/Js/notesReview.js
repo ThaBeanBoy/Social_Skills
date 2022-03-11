@@ -4,12 +4,12 @@ import {
   UI_NoteReview_noteReviewsList,
 } from './UIelements';
 
-import modules from '../comunicasi.json';
+import modules from './storage';
 
 import html from './html';
 
 // Attaching module to note review
-modules.forEach((module, indx) => {
+modules().forEach((module, indx) => {
   // Attaching the element to li
   UI_NoteReview_noteReviewsList.append(
     html({
