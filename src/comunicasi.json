@@ -1,5 +1,13 @@
 [
   {
+    "title": "Presence",
+    "notes": "No notes as yet",
+    "targetMeets": 200,
+    "moduleDayDuration": 25,
+    "inactiveDaysAllowed": 5,
+    "id": "md_presence"
+  },
+  {
     "title": "Basics (Pre_screenig and conversation)",
     "notes": "No notes as yet",
     "targetMeets": 200,
