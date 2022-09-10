@@ -8,12 +8,13 @@
     >< Sort out app icon issue
 
 # HTML & CSS
-    >< make variables for elements of UI
-    >< transition between home and module view
+    <> On window resize
     <> Loading screen
         <> Svg logo appearing
         <> Svg logo dissipating
         <> Background color of yellow fades away
+    >< make variables for elements of UI
+    >< transition between home and module view
     >< Remove blue highlight when user clicks a button
     >< Remove user select
     >< All sections should have the same padding
@@ -31,6 +32,7 @@
         >< Basic markup
         >< Close button
         >< Open and close of review
+        >< Rotate arrow
 
     #Module view
         >< Basic markup
@@ -42,21 +44,70 @@
         >< back button
 
 # JS
-    <> When making elements from strings, compress the final strings e.g:
+    >< When making elements from strings, compress the final strings e.g:
         function takes in a string(to be the html ofcourse)
-        function spits out the string but compresses 
-    <> Initiate Swiper to swiper from Home to Module view
-    <> On window resize
+        function spits out the string but compresses
+    >< export modules
+        >< the module itself
+        >< it's local storage
+        >< first save
+        >< last save
+
+        >< helper function for
+            >< Incrementing/Decrementing
+            >< SetNumbOfMeets
+            >< Saving field Notes
+        
+        >< totalActiveDays > current date - first save
+            >< set meets to []
+        >< inactive days allowed > current date - last save
+            >< set meets to []
+
+        >< Unlocked status
+            >< if previous module done || previous module is a language 
+
+    <> Debug dates thingies
+
+    <>display status of current module
+        <> totalActiveDays left
+        <> how many inactive days left
+
+    <> Add conflict resolution to json
+        <> No days of activities nor inactive days allowed, should just be perpetual 
 
     # Home
-        <> Alertion of locked modules
-        <> Opening a module
+        >< Display module view if  unlocked
+        >< Display alert if locked
+        >< Sort out padding at the bottom to give space to the "open notes review" button
 
     # Notes Review
-        <> Open and closing of Notes
-        <> Alertion of locked modules
+        >< Open and closing of Notes
+        <> Animation of the li elements
 
     #Module view
+        <> On open
+            >< Module name
+            >< percantage progression
+            >< meets
+            >< field notes
+            >< Note review
+
+            >< Incrementing
+                >< Update the meets,
+                >< Update the progress percantage thing
+                >< Update the home
+            >< Saving changes to note review (with auto saving)
+            >< Decrementing
+                >< If the last meet defeats the codintions for the days, alert user
+                >< Update the meets,
+                >< Update the progress percantage thing
+                >< Update the home
+
+            >< Size up the icons and buttons
+
+            <> Make the text area a proper notepad (TinyMCE) 
+
+        <> Clicking on the module name should display status of the the module
         <> Display module name
         <> displaying progression of module
         <> Display meets
@@ -65,6 +116,5 @@
             <> Results show in meets
             <> Results show in progression
 
-        <> Input and save field Notes (with auto saving)
-
-    <> Add 30 termination if incomplete
+    #Alert
+        <> A click outside the box should close the alert

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="manifest" href="./manifest.json" />
   </head>
   <body>
@@ -24,32 +25,7 @@
         <h1>Social Skills</h1>
       </div>
 
-      <ul class="allModules cool-list">
-        <li class="module unlocked button" data-module="x">
-          <div class="left-side">
-            <span class="module-name">Yo</span>
-            <div class="progress-bar">
-              <div class="progress-filler"></div>
-            </div>
-          </div>
-          <div class="right-side">
-            16 <br />
-            38%
-          </div>
-        </li>
-
-        <li class="module locked button" data-module="x">
-          <div class="left-side">
-            <span class="module-name">Basic conversation</span>
-            <div class="progress-bar">
-              <div class="progress-filler"></div>
-            </div>
-          </div>
-          <div class="right-side">
-            <i class="icon-lock"></i>
-          </div>
-        </li>
-      </ul>
+      <ul class="allModules cool-list"></ul>
 
       <div id="viewNotes">View Notes <i class="icon-newspaper"></i></div>
     </section>
@@ -64,7 +40,7 @@
         <li class="moduleNoteReview button" data-showing="false">
           <div class="moduleNoteReviewTop">
             <span class="module-name">Module name</span>
-            <i class="icon-left-open"></i>
+            <i id="showing-indicator" class="icon-left-open"></i>
           </div>
 
           <p class="note">hello, this is a note for this module...</p>
@@ -73,7 +49,7 @@
         <li class="moduleNoteReview button" data-showing="true">
           <div class="moduleNoteReviewTop">
             <span class="module-name">Module name</span>
-            <i class="icon-left-open"></i>
+            <i id="showing-indicator" class="icon-left-open"></i>
           </div>
 
           <p class="note">hello, this is a note for this module...</p>
@@ -90,7 +66,9 @@
 
       <div class="count-manipulator">
         <span id="decrementer" class="button">-</span>
-        <span id="details">Meets: 32/120</span>
+        <span id="details"
+          >Meets: <span id="displayedNumOfMeets">32</span>/120</span
+        >
         <span id="incrementor" class="button">+</span>
       </div>
 
@@ -104,6 +82,7 @@
           <textarea
             id="field-notes-text-area"
             class="block swiper-slide"
+            placeholder="Place field notes here"
           ></textarea>
           <p class="block swiper-slide">note dawg</p>
         </div>
@@ -111,3 +90,32 @@
     </section>
   </body>
 </html>
+
+<!-- 
+  Basic markups fam
+
+  !Module in home screen
+  <li class="module unlocked button" data-module="x">
+    <div class="left-side">
+        <span class="module-name">Yo</span>
+        <div class="progress-bar">
+          <div class="progress-filler"></div>
+        </div>
+      </div>
+    <div class="right-side">
+      16<br />38%
+    </div>
+  </li>
+
+  <li class="module locked button" data-module="x">
+    <div class="left-side">
+      <span class="module-name">Basic conversation</span>
+      <div class="progress-bar">
+        <div class="progress-filler"></div>
+      </div>
+    </div>
+    <div class="right-side">
+      <i class="icon-lock"></i>
+    </div>
+  </li>
+-->

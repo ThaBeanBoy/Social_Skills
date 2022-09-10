@@ -1,15 +1,12 @@
 import './styles.scss';
 
-import moduleViewCode from './Js/moduleView';
-import homeCode from './Js/home';
-import noteReviewCode from './Js/notesReview';
+import modulesInJSON from './comunicasi.json';
 
 import { UI_Home_closeNoteReview } from './Js/UIelements';
-import { Home_NoteReview } from './Js/pageManipulations';
+import { Home_NoteReviewNotes } from './Js/pageManipulations';
 
-moduleViewCode();
-homeCode();
-noteReviewCode();
+// console.log('modules:', modules);
+// console.log(timediff(new Date(2002, 2, 5), new Date(2022, 2, 5), 'D'));
 
 // Setting up service worker
 if ('serviceWorker' in navigator) {
@@ -26,6 +23,11 @@ if ('serviceWorker' in navigator) {
 }
 
 // opening note reviews
-UI_Home_closeNoteReview.addEventListener('click', () =>
-  Home_NoteReview.reverse()
-);
+UI_Home_closeNoteReview.addEventListener('click', () => {
+  console.log('reverse');
+  Home_NoteReviewNotes(false);
+});
+
+import './Js/moduleView';
+import './Js/notesReview';
+import './Js/home';

@@ -39,8 +39,10 @@ section.noteReview {
   }
 
   .noteReviewsList {
+    overflow: scroll;
     flex: 1;
     width: 100%;
+    padding: 0.5rem 0;
 
     .moduleNoteReview {
       overflow: hidden;
