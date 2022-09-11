@@ -1,4 +1,3 @@
-import moment from 'moment';
 import timediff from 'timediff';
 
 import modulesInJSON from '../comunicasi.json';
