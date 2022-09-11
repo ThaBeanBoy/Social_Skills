@@ -6,6 +6,8 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
 
+  publicPath: './dev-build',
+
   plugins: [
     new BrowserSyncPlugin({
       // browse to http://localhost:3000/ during development,
